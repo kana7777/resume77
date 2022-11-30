@@ -1,0 +1,709 @@
+@import url("https://fonts.googleapis.com/css2?family=Azeret+Mono&family=Inter&family=Nerko+One&family=Noto+Sans+TC&display=swap");
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+:root {
+  --bg: #dcdde1;
+  --color-icon: #535c68;
+  --social-icon1: #e4405f;
+  --social-icon2: #3b5999;
+  --social-icon3: #0057FF;
+  --social-icon4: #cd201f;
+  --social-icon5: #0077B5;
+}
+
+/*css reset*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+.index__h1 {
+  color: #00cc99;
+  font-size: 20px;
+  font-weight: 400;
+}
+
+body {
+  background: #F9F4EA;
+}
+
+.container {
+  border-radius: 2em;
+}
+
+.warpper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.tab {
+  cursor: pointer;
+  padding: 10px 20px;
+  margin: 0px 3px;
+  background: #fff;
+  color: #8BA3E1;
+  border-radius: 10px 10px 0px 0px;
+  -webkit-box-shadow: 0 8px 10px  #888888;
+          box-shadow: 0 8px 10px  #888888;
+  font-family: 'Nerko One', cursive;
+  border-top: 6px solid #8BA3E1;
+  border-left: 6px solid #8BA3E1;
+  border-right: 6px solid #8BA3E1;
+}
+
+.panels {
+  background: #8BA3E1;
+  -webkit-box-shadow: 0 8px 10px  #888888;
+          box-shadow: 0 8px 10px  #888888;
+  min-height: 200px;
+  width: 100%;
+  border-radius: 30px;
+  overflow: hidden;
+  padding: 48px;
+}
+
+@media (max-width: 1193px) {
+  .panels {
+    padding: 24px;
+  }
+}
+
+@media (max-width: 768px) {
+  .panels {
+    padding: 24px;
+  }
+}
+
+.panel {
+  display: none;
+  -webkit-animation: fadein .8s;
+          animation: fadein .8s;
+}
+
+@-webkit-keyframes fadein {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fadein {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.radio {
+  display: none;
+}
+
+#one:checked ~ .panels #one-panel,
+#two:checked ~ .panels #two-panel {
+  display: block;
+}
+
+#one:checked ~ .tabs #one-tab,
+#two:checked ~ .tabs #two-tab {
+  background: #8BA3E1;
+  color: #fff;
+}
+
+.tag {
+  top: -2.2rem;
+  background: #C1E4E8;
+  border-top-left-radius: 0.5rem;
+  border-top-right-radius: 0.5rem;
+}
+
+.tag h4 {
+  font-family: 'Inter', sans-serif;
+}
+
+.title {
+  /* The typing effect */
+  /* The typewriter cursor effect */
+}
+
+.title h1 {
+  font-family: 'Nerko One', cursive;
+  color: #8BA3E1;
+  margin-bottom: 0;
+  font-size: 64px;
+}
+
+@media (max-width: 1193px) {
+  .title h1 {
+    font-size: 2.5rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .title h1 {
+    font-size: 2rem;
+  }
+}
+
+.title .typeing {
+  overflow: hidden;
+  border-right: .15em solid gray;
+  white-space: nowrap;
+  margin: 0 auto;
+  letter-spacing: .1em;
+  -webkit-animation: typing 3s steps(9, end), blink-caret 0.5s step-end infinite;
+          animation: typing 3s steps(9, end), blink-caret 0.5s step-end infinite;
+}
+
+@-webkit-keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+@-webkit-keyframes blink-caret {
+  from, to {
+    border-color: transparent;
+  }
+  50% {
+    border-color: gray;
+  }
+}
+
+@keyframes blink-caret {
+  from, to {
+    border-color: transparent;
+  }
+  50% {
+    border-color: gray;
+  }
+}
+
+.socialicon ul {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.socialicon ul li {
+  position: relative;
+  list-style: none;
+  cursor: pointer;
+}
+
+.socialicon ul li a {
+  text-decoration: none;
+}
+
+.socialicon ul li a .fa-brands {
+  font-size: 2em;
+  color: #555;
+}
+
+.socialicon i {
+  margin: 0 auto;
+}
+
+.socialicon ul li a::before {
+  font-family: "FontAwesome";
+  position: absolute;
+  font-size: 2em;
+  height: 0;
+  overflow: hidden;
+  -webkit-transition: 0.5s ease-in-out;
+  -o-transition: 0.5s ease-in-out;
+  transition: 0.5s ease-in-out;
+}
+
+.socialicon ul li:nth-child(1) a::before {
+  content: "\f16d";
+  color: #25D366;
+  border-bottom: 3px solid #25D366;
+}
+
+.socialicon ul li:nth-child(2) a::before {
+  content: "\f232";
+  color: #25D366;
+  border-bottom: 3px solid #25D366;
+}
+
+.socialicon ul li:nth-child(3) a::before {
+  content: "\f099";
+  color: #1DA1F2;
+  border-bottom: 3px solid #1DA1F2;
+}
+
+.socialicon ul li:hover a::before {
+  height: 100%;
+}
+
+.personcard {
+  margin: 0 auto;
+  border-radius: 1rem;
+  height: 100%;
+  -webkit-box-shadow: 0 6px 10px  #00000025;
+          box-shadow: 0 6px 10px  #00000025;
+}
+
+.personcard .profileimg {
+  width: 309px;
+}
+
+.personcard .namae::after {
+  content: '';
+  display: block;
+  width: 80%;
+  margin: 0 auto;
+  border-bottom: 3px solid #8BA3E1;
+  margin-bottom: 2rem;
+}
+
+.expcard {
+  border-radius: 1rem;
+  -webkit-box-shadow: 0 6px 10px  #00000025;
+          box-shadow: 0 6px 10px  #00000025;
+  height: 600px;
+}
+
+@media (max-width: 768px) {
+  .expcard {
+    border-radius: 0.5rem;
+    margin-left: 0;
+  }
+}
+
+@media (max-width: 1193px) {
+  .expcard {
+    margin-left: 0;
+    border-radius: 0.5rem;
+  }
+}
+
+.expcard .bar {
+  width: 100%;
+  height: 5rem;
+}
+
+.undercard .container {
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 3rem;
+}
+
+@media (max-width: 1193px) {
+  .undercard .container {
+    grid-template-columns: repeat(1, 1fr);
+    gap: 3rem;
+    width: 70%;
+  }
+}
+
+@media (max-width: 768px) {
+  .undercard .container {
+    grid-template-columns: repeat(1, 1fr);
+    gap: 3rem;
+    width: 100%;
+  }
+}
+
+.undercard .container .grid-item {
+  border-radius: 1rem;
+  width: 100%;
+  height: 100%;
+  background: #fff;
+}
+
+.undercard .container .grid-item:hover {
+  -webkit-box-shadow: 0 6px 10px  #00000025;
+          box-shadow: 0 6px 10px  #00000025;
+  -webkit-transform: scale(1);
+      -ms-transform: scale(1);
+          transform: scale(1);
+  -webkit-transition: all .3s ease-out;
+  -o-transition: all .3s ease-out;
+  transition: all .3s ease-out;
+}
+
+.undercard .container .item1 {
+  -webkit-transform: rotate(1.5deg);
+      -ms-transform: rotate(1.5deg);
+          transform: rotate(1.5deg);
+}
+
+.undercard .container .item2 {
+  grid-column: 2/3;
+  grid-row: 3/-1;
+}
+
+@media (max-width: 1193px) {
+  .undercard .container .item2 {
+    grid-column: 1/1;
+    grid-row: 1/1;
+  }
+}
+
+.undercard .profileicon .wrapper {
+  margin: 0 auto;
+  list-style: none;
+}
+
+.undercard .profileicon .wrapper .icon {
+  position: relative;
+  background: #ffffff;
+  border-radius: 50%;
+  padding: 15px;
+  margin: 10px;
+  width: 50px;
+  height: 50px;
+  font-size: 18px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+          box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  -webkit-transition: all 0.2s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  -o-transition: all 0.2s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  transition: all 0.2s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.undercard .profileicon .wrapper .tooltip {
+  position: absolute;
+  top: 0;
+  font-size: 14px;
+  background: blue;
+  color: #ffffff;
+  padding: 5px 8px;
+  border-radius: 5px;
+  -webkit-box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+          box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+  opacity: 0;
+  pointer-events: none;
+  -webkit-transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  -o-transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.undercard .profileicon .wrapper .tooltip::before {
+  position: absolute;
+  content: "";
+  height: 8px;
+  width: 8px;
+  background: #ffffff;
+  bottom: -3px;
+  left: 50%;
+  -webkit-transform: translate(-50%) rotate(45deg);
+      -ms-transform: translate(-50%) rotate(45deg);
+          transform: translate(-50%) rotate(45deg);
+  -webkit-transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  -o-transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.undercard .profileicon .wrapper .icon:hover .tooltip {
+  top: -45px;
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+}
+
+.undercard .profileicon .wrapper .list-item {
+  margin-left: 64px;
+}
+
+@media (max-width: 768px) {
+  .undercard .profileicon .wrapper .list-item {
+    margin-left: 15px;
+  }
+}
+
+.undercard .profileicon .wrapper .item-content {
+  font-family: 'Inter';
+}
+
+.undercard .profileicon .wrapper .twitter:hover,
+.undercard .profileicon .wrapper .twitter:hover .tooltip,
+.undercard .profileicon .wrapper .twitter:hover .tooltip::before {
+  background: #1877F2;
+  color: #ffffff;
+}
+
+.undercard .profileicon .wrapper .address:hover,
+.undercard .profileicon .wrapper .address:hover .tooltip,
+.undercard .profileicon .wrapper .address:hover .tooltip::before {
+  background: #fd7e14;
+  color: #ffffff;
+}
+
+.undercard .skillcard {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
+}
+
+.undercard .skillcard .single-chart {
+  width: 33%;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  position: relative;
+}
+
+.undercard .skillcard .single-chart i {
+  position: absolute;
+  top: 30%;
+  left: 45%;
+  font-size: 1.5rem;
+}
+
+.undercard .skillcard .single-chart img {
+  position: absolute;
+  top: 30%;
+  left: 42%;
+}
+
+@media (max-width: 768px) {
+  .undercard .skillcard .single-chart img {
+    font-size: 12px;
+  }
+}
+
+@media (max-width: 768px) {
+  .undercard .skillcard .single-chart img {
+    top: 25%;
+    left: 45%;
+  }
+}
+
+.undercard .skillcard .circular-chart {
+  display: block;
+  margin: 10px auto;
+  max-width: 80%;
+  max-height: 250px;
+}
+
+.undercard .skillcard .circle-bg {
+  fill: none;
+  stroke: #eee;
+  stroke-width: 3.8;
+}
+
+.undercard .skillcard .circle {
+  fill: none;
+  stroke-width: 2.8;
+  stroke-linecap: round;
+  -webkit-animation: progress 5s ease-out forwards;
+          animation: progress 5s ease-out forwards;
+}
+
+@-webkit-keyframes progress {
+  0% {
+    stroke-dasharray: 0 100;
+  }
+}
+
+@keyframes progress {
+  0% {
+    stroke-dasharray: 0 100;
+  }
+}
+
+.undercard .skillcard .circular-chart.orange .circle {
+  stroke: #ff9f00;
+}
+
+.undercard .skillcard .circular-chart.green .circle {
+  stroke: #4CC790;
+}
+
+.undercard .skillcard .circular-chart.blue .circle {
+  stroke: #3c9ee5;
+}
+
+.undercard .skillcard .percentage {
+  fill: #666;
+  font-family: sans-serif;
+  font-size: 0.5em;
+  text-anchor: middle;
+}
+
+.undercard .hobbyicon {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  z-index: -10;
+}
+
+.undercard .hobbyicon .icon-list {
+  width: 100%;
+  max-width: 50rem;
+  padding: 0 1.5rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.undercard .hobbyicon .icon-link {
+  position: relative;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  font-size: 2rem;
+  text-decoration: none;
+  color: var(--color-icon);
+  width: 6rem;
+  height: 6rem;
+  -webkit-transition: .3s linear;
+  -o-transition: .3s linear;
+  transition: .3s linear;
+  z-index: 1;
+  margin: auto;
+  font-family: "FontAwesome";
+}
+
+.undercard .hobbyicon .icon-link:hover {
+  color: #fff;
+}
+
+.undercard .hobbyicon .icon-link i {
+  margin: auto;
+}
+
+.undercard .hobbyicon .icon-link::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  width: 6rem;
+  height: 6rem;
+  background: #000;
+  border-radius: 50%;
+  z-index: -1;
+  -webkit-transform: scale(0);
+      -ms-transform: scale(0);
+          transform: scale(0);
+  -webkit-transition: 0.3s;
+  -o-transition: 0.3s;
+  transition: 0.3s;
+}
+
+.undercard .hobbyicon .icon-link:hover::before {
+  -webkit-transform: scale(1);
+      -ms-transform: scale(1);
+          transform: scale(1);
+}
+
+.undercard .hobbyicon .icon-item:nth-child(1) a:hover:before {
+  background: var(--social-icon1);
+}
+
+.undercard .hobbyicon .icon-item:nth-child(2) a:hover:before {
+  background: var(--social-icon2);
+}
+
+.undercard .hobbyicon .icon-item:nth-child(3) a:hover:before {
+  background: var(--social-icon3);
+}
+
+.undercard .hobbyicon .icon-item:nth-child(4) a:hover:before {
+  background: var(--social-icon4);
+}
+
+.undercard .hobbyicon .icon-item:nth-child(5) a:hover:before {
+  background: var(--social-icon5);
+}
+
+/*# sourceMappingURL=all.css.map */
