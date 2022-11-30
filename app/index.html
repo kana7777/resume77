@@ -1,0 +1,265 @@
+---
+title: Boostrap Index
+layout: ./app/layout.ejs
+engine: ejs
+current: index
+---
+
+<div class="container">
+  <div class="warpper mt-5">
+    <input class="radio" id="one" name="group" type="radio" checked>
+    <input class="radio" id="two" name="group" type="radio">
+
+    <div class="tabs d-flex flex-row bd-highlight mb-0 fs-2 mx-4">
+      <label class="tab" id="one-tab" for="one">Resume</label>
+      <label class="tab" id="two-tab" for="two">Protofilo</label>
+    </div>
+    <div class="panels">
+    <div class="panel" id="one-panel">
+       
+       <div class="resumepage container">
+        <div class="row">
+          <div class="personcard bd-highlight col-lg-5 bg-light d-flex flex-column">
+            <img src="./assets/images/becky.png" alt="" class="profileimg mt-4 m-auto rounded-circle">
+              <div class="namae d-flex flex-column">
+                <div class="title m-auto p-3">
+                  <h1 class="typeing">Becky chen</h1>
+                </div>
+                <div class="mx-auto mb-3">
+                  <img src="./assets/images/NAME.png" alt="" width="150px">
+                </div> 
+              </div>  
+              <div class="socialicon mb-5" >
+                <ul>
+                  <li class="mx-4"><a href="#"  target="_blank" ><i class="fa-brands fa-instagram instagram"></i></a></li>
+                  <li class="mx-4"><a href="#"  target="_blank" ><i class="fa-brands fa-whatsapp whatsapp"></i></a></li>
+                  <li class="mx-4"><a href="#"  target="_blank" ><i class="fa-brands fa-twitter twitter"></i></a></li>
+                </ul>
+ 
+
+                 
+              </div>
+
+            </div>
+          <!-- 工作經歷 -->
+          <div class="expcard col-lg-6 bg-light position-relative mt-5">
+            <div class="tag position-absolute p-2 mb-0">
+              <h4 class="fs-6 mb-0 px-2">EXPERIENCE</h4>
+            </div>
+              <div class="bar"></div>
+          </div>
+        </div>
+<!-- 簡介 grid-->
+
+        <section class="undercard  my-5">
+          <div class="container p-0">
+            <div class="grid-item position-relative item1">
+              <div class="tag position-absolute p-2 mb-0 mx-3">
+                <h4 class="fs-6 mb-0 px-3 ">PROFILE</h4>
+              </div>
+              <div class="profileicon ">
+                <ul class="wrapper d-flex flex-column my-4 ">
+                  <li class="list-item d-flex flex-row justify-content-space-around align-items-center">
+                    <div class="icon twitter">
+                      <span class="tooltip">Phone</span>
+                      <span><i class="fa-sharp fa-solid fa-phone"></i></span>
+                    </div>
+                      <span class="item-content px-3 fs-6 m-0">0926-947-109</span>
+                  </li>
+                  <li class="list-item d-flex flex-row justify-content-space-around align-items-center">
+                    <div class="icon twitter">
+                      <span class="tooltip">Email</span>
+                      <span><i class="fa-solid fa-envelope"></i></span>
+                    </div>
+                      <span class="item-content px-3 fs-6 m-0">yichi0109@gmail.com</span>
+                  </li>
+ 
+                  <li class="list-item d-flex flex-row justify-content-space-around align-items-center">
+                    <div class="icon address">
+                      <span class="tooltip">Address</span>
+                      <span><i class="fa-solid fa-location-dot "></i></span>
+                    </div>
+                      <span class="item-content px-3 fs-6 m-0">桃園市桃園區</span>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div class="grid-item item2 position-relative">
+              <div class="tag position-absolute p-2 mb-0 mx-3">
+                <h4 class="fs-6 mb-0 px-3 ">SKILL</h4>
+              </div>
+              <div class="skill mt-5 mx-3">
+                <div class="skillcard">
+                  <!-- <div class="single-chart">
+                    <svg viewBox="0 0 36 36" class="circular-chart orange">
+                      <path class="circle-bg"
+                        d="M18 2.0845
+                          a 15.9155 15.9155 0 0 1 0 31.831
+                          a 15.9155 15.9155 0 0 1 0 -31.831"
+                      />
+                      <path class="circle"
+                        stroke-dasharray="30, 100"
+                        d="M18 2.0845
+                          a 15.9155 15.9155 0 0 1 0 31.831
+                          a 15.9155 15.9155 0 0 1 0 -31.831"
+                      />
+                      <text x="18" y="20.35" class="percentage"></text>
+                    </svg>
+                  </div>
+                   -->
+                   <div class="single-chart d-flex flex-column">
+                    <svg viewBox="0 0 36 36" class="circular-chart blue">
+                      <path class="circle-bg"
+                        d="M18 2.0845
+                          a 15.9155 15.9155 0 0 1 0 31.831
+                          a 15.9155 15.9155 0 0 1 0 -31.831"
+                      />
+                      <path class="circle"
+                        stroke-dasharray="90, 100"
+                        d="M18 2.0845
+                          a 15.9155 15.9155 0 0 1 0 31.831
+                          a 15.9155 15.9155 0 0 1 0 -31.831"
+                      />
+                      <span> <img src="https://upload.wikimedia.org/wikipedia/commons/a/af/Adobe_Photoshop_CC_icon.svg" alt="" width="26px">  </span>
+                    </svg>
+                    <p class="my-3 mx-auto">Photoshop</p>
+                  </div>
+                   <div class="single-chart d-flex flex-column ">
+                    <svg viewBox="0 0 36 36" class="circular-chart green">
+                      <path class="circle-bg"
+                        d="M18 2.0845
+                          a 15.9155 15.9155 0 0 1 0 31.831
+                          a 15.9155 15.9155 0 0 1 0 -31.831"
+                      />
+                      <path class="circle"
+                        stroke-dasharray="60, 100"
+                        d="M18 2.0845
+                          a 15.9155 15.9155 0 0 1 0 31.831
+                          a 15.9155 15.9155 0 0 1 0 -31.831"
+                      />
+                      <span> <i class="fa-brands fa-html5"></i></span>
+                    </svg>
+                    <p class="my-3 mx-auto">HTML+CSS </p>
+                   </div>
+                   
+                  <div class="single-chart d-flex flex-column">
+                    <svg viewBox="0 0 36 36" class="circular-chart green">
+                      <path class="circle-bg"
+                        d="M18 2.0845
+                          a 15.9155 15.9155 0 0 1 0 31.831
+                          a 15.9155 15.9155 0 0 1 0 -31.831"
+                      />
+                      <path class="circle"
+                        stroke-dasharray="60, 100"
+                        d="M18 2.0845
+                          a 15.9155 15.9155 0 0 1 0 31.831
+                          a 15.9155 15.9155 0 0 1 0 -31.831"
+                      />
+                      <span><i  class="fa-brands fa-figma "></i></span>
+                    </svg>
+                    <p class="my-3 mx-auto">figma/xd </p>
+                  </div>
+                
+
+                  <div class="single-chart">
+                    <svg viewBox="0 0 36 36" class="circular-chart orange">
+                      <path class="circle-bg"
+                        d="M18 2.0845
+                          a 15.9155 15.9155 0 0 1 0 31.831
+                          a 15.9155 15.9155 0 0 1 0 -31.831"
+                      />
+                      <path class="circle"
+                        stroke-dasharray="30, 100"
+                        d="M18 2.0845
+                          a 15.9155 15.9155 0 0 1 0 31.831
+                          a 15.9155 15.9155 0 0 1 0 -31.831"
+                      />
+                      
+                    </svg>
+                  </div>
+                  <div class="single-chart d-flex flex-column">
+                    <svg viewBox="0 0 36 36" class="circular-chart blue">
+                      <path class="circle-bg"
+                        d="M18 2.0845
+                          a 15.9155 15.9155 0 0 1 0 31.831
+                          a 15.9155 15.9155 0 0 1 0 -31.831"
+                      />
+                      <path class="circle"
+                        stroke-dasharray="90, 100"
+                        d="M18 2.0845
+                          a 15.9155 15.9155 0 0 1 0 31.831
+                          a 15.9155 15.9155 0 0 1 0 -31.831"
+                      />
+                      <span><i  class="fa-brands fa-figma  "></i></span>
+                    </svg>
+                    <p class="my-3 mx-auto">figma/xd </p>
+                  </div>
+                </div>
+              </div>
+
+              
+            </div>
+            <div class="grid-item position-relative item3">
+              <div class="tag position-absolute p-2 mb-0 mx-3">
+                <h4 class="fs-6 mb-0 px-3 ">HOBBY</h4>
+              </div>
+              <div class="hobbyicon my-3">
+                <ul class="icon-list">
+                  <li class="icon-item">
+                           <a href="#" class="icon-link"><i class="fab fa-instagram"></i></a>
+                  </li>
+                  <li class="icon-item">
+                    <span class="icon-link"><i class="fab fa-facebook-f"></i></span>
+                  </li>
+                  <li class="icon-item">
+                      <a href="#" class="icon-link"><i class="fa-brands fa-behance"></i></a>
+                    </li>
+                  <li class="icon-item">
+                     <a href="#" class="icon-link"><i class="fab fa-youtube"></i></a>
+                  </li>
+                  <li class="icon-item">
+                    <a href="#" class="icon-link"><i class="fa-brands fa-linkedin"></i></i></a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            
+          </div>
+             
+           
+           
+        </section>
+
+
+          
+
+      </div>
+ 
+       
+    </div>
+    <div class="panel" id="two-panel">
+      <div class="panel-title">Take-Away Skills</div>
+      <p>You will learn many aspects of styling web pages! You’ll be able to set up the correct file structure, edit text and colors, and create attractive layouts. With these skills, you’ll be able to customize the appearance of your web pages to suit your every need!</p>
+    </div>
+    </div>
+</div>
+
+ 
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        ...
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Save changes</button>
+      </div>
+    </div>
+  </div>
+</div>
