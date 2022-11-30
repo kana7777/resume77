@@ -172,6 +172,61 @@ body {
   font-family: 'Inter', sans-serif;
 }
 
+.cardstyles {
+  border-radius: 1rem;
+}
+
+.cardstyles:hover {
+  -webkit-box-shadow: 0 6px 10px  #00000025;
+          box-shadow: 0 6px 10px  #00000025;
+  scale: 1.01;
+  -webkit-transition: all .3s ease-out;
+  -o-transition: all .3s ease-out;
+  transition: all .3s ease-out;
+}
+
+@media (max-width: 768px) {
+  .cardstyles {
+    border-radius: 0.5rem;
+    margin-left: 0;
+  }
+}
+
+.cardtitle {
+  color: #495057;
+  font-family: 'Azeret Mono';
+  font-size: 1.5rem;
+}
+
+.cardtitle::after {
+  position: absolute;
+  bottom: 0;
+  left: 30%;
+  content: '';
+  width: 40%;
+  border-bottom: 4px solid #495057;
+  -webkit-animation: line 1s linear;
+          animation: line 1s linear;
+}
+
+@-webkit-keyframes line {
+  from {
+    width: 0;
+  }
+  to {
+    width: 40%;
+  }
+}
+
+@keyframes line {
+  from {
+    width: 0;
+  }
+  to {
+    width: 40%;
+  }
+}
+
 .title {
   /* The typing effect */
   /* The typewriter cursor effect */
@@ -316,106 +371,20 @@ body {
   width: 309px;
 }
 
-.personcard .namae::after {
-  content: '';
-  display: block;
-  width: 80%;
-  margin: 0 auto;
-  border-bottom: 3px solid #8BA3E1;
-  margin-bottom: 2rem;
-}
-
 .expcard {
-  border-radius: 1rem;
-  -webkit-box-shadow: 0 6px 10px  #00000025;
-          box-shadow: 0 6px 10px  #00000025;
-  height: 600px;
+  height: 500px;
 }
 
-@media (max-width: 768px) {
-  .expcard {
-    border-radius: 0.5rem;
-    margin-left: 0;
-  }
-}
-
-@media (max-width: 1193px) {
-  .expcard {
-    margin-left: 0;
-    border-radius: 0.5rem;
-  }
-}
-
-.expcard .bar {
-  width: 100%;
-  height: 5rem;
-}
-
-.undercard .container {
-  margin: 0 auto;
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 3rem;
-}
-
-@media (max-width: 1193px) {
-  .undercard .container {
-    grid-template-columns: repeat(1, 1fr);
-    gap: 3rem;
-    width: 70%;
-  }
-}
-
-@media (max-width: 768px) {
-  .undercard .container {
-    grid-template-columns: repeat(1, 1fr);
-    gap: 3rem;
-    width: 100%;
-  }
-}
-
-.undercard .container .grid-item {
-  border-radius: 1rem;
-  width: 100%;
+.profile {
   height: 100%;
-  background: #fff;
 }
 
-.undercard .container .grid-item:hover {
-  -webkit-box-shadow: 0 6px 10px  #00000025;
-          box-shadow: 0 6px 10px  #00000025;
-  -webkit-transform: scale(1);
-      -ms-transform: scale(1);
-          transform: scale(1);
-  -webkit-transition: all .3s ease-out;
-  -o-transition: all .3s ease-out;
-  transition: all .3s ease-out;
-}
-
-.undercard .container .item1 {
-  -webkit-transform: rotate(1.5deg);
-      -ms-transform: rotate(1.5deg);
-          transform: rotate(1.5deg);
-}
-
-.undercard .container .item2 {
-  grid-column: 2/3;
-  grid-row: 3/-1;
-}
-
-@media (max-width: 1193px) {
-  .undercard .container .item2 {
-    grid-column: 1/1;
-    grid-row: 1/1;
-  }
-}
-
-.undercard .profileicon .wrapper {
+.profile .profileicon .wrapper {
   margin: 0 auto;
   list-style: none;
 }
 
-.undercard .profileicon .wrapper .icon {
+.profile .profileicon .wrapper .icon {
   position: relative;
   background: #ffffff;
   border-radius: 50%;
@@ -445,7 +414,7 @@ body {
   transition: all 0.2s cubic-bezier(0.68, -0.55, 0.265, 1.55);
 }
 
-.undercard .profileicon .wrapper .tooltip {
+.profile .profileicon .wrapper .tooltip {
   position: absolute;
   top: 0;
   font-size: 14px;
@@ -462,7 +431,7 @@ body {
   transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
 }
 
-.undercard .profileicon .wrapper .tooltip::before {
+.profile .profileicon .wrapper .tooltip::before {
   position: absolute;
   content: "";
   height: 8px;
@@ -478,163 +447,48 @@ body {
   transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
 }
 
-.undercard .profileicon .wrapper .icon:hover .tooltip {
+.profile .profileicon .wrapper .icon:hover .tooltip {
   top: -45px;
   opacity: 1;
   visibility: visible;
   pointer-events: auto;
 }
 
-.undercard .profileicon .wrapper .list-item {
-  margin-left: 64px;
-}
-
 @media (max-width: 768px) {
-  .undercard .profileicon .wrapper .list-item {
+  .profile .profileicon .wrapper .list-item {
     margin-left: 15px;
   }
 }
 
-.undercard .profileicon .wrapper .item-content {
+.profile .profileicon .wrapper .item-content {
   font-family: 'Inter';
 }
 
-.undercard .profileicon .wrapper .twitter:hover,
-.undercard .profileicon .wrapper .twitter:hover .tooltip,
-.undercard .profileicon .wrapper .twitter:hover .tooltip::before {
+.profile .profileicon .wrapper .twitter:hover,
+.profile .profileicon .wrapper .twitter:hover .tooltip,
+.profile .profileicon .wrapper .twitter:hover .tooltip::before {
   background: #1877F2;
   color: #ffffff;
 }
 
-.undercard .profileicon .wrapper .address:hover,
-.undercard .profileicon .wrapper .address:hover .tooltip,
-.undercard .profileicon .wrapper .address:hover .tooltip::before {
+.profile .profileicon .wrapper .address:hover,
+.profile .profileicon .wrapper .address:hover .tooltip,
+.profile .profileicon .wrapper .address:hover .tooltip::before {
   background: #fd7e14;
   color: #ffffff;
 }
 
-.undercard .skillcard {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-flow: row wrap;
-          flex-flow: row wrap;
-}
-
-.undercard .skillcard .single-chart {
-  width: 33%;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
-  position: relative;
-}
-
-.undercard .skillcard .single-chart i {
-  position: absolute;
-  top: 30%;
-  left: 45%;
-  font-size: 1.5rem;
-}
-
-.undercard .skillcard .single-chart img {
-  position: absolute;
-  top: 30%;
-  left: 42%;
-}
-
-@media (max-width: 768px) {
-  .undercard .skillcard .single-chart img {
-    font-size: 12px;
-  }
-}
-
-@media (max-width: 768px) {
-  .undercard .skillcard .single-chart img {
-    top: 25%;
-    left: 45%;
-  }
-}
-
-.undercard .skillcard .circular-chart {
-  display: block;
-  margin: 10px auto;
-  max-width: 80%;
-  max-height: 250px;
-}
-
-.undercard .skillcard .circle-bg {
-  fill: none;
-  stroke: #eee;
-  stroke-width: 3.8;
-}
-
-.undercard .skillcard .circle {
-  fill: none;
-  stroke-width: 2.8;
-  stroke-linecap: round;
-  -webkit-animation: progress 5s ease-out forwards;
-          animation: progress 5s ease-out forwards;
-}
-
-@-webkit-keyframes progress {
-  0% {
-    stroke-dasharray: 0 100;
-  }
-}
-
-@keyframes progress {
-  0% {
-    stroke-dasharray: 0 100;
-  }
-}
-
-.undercard .skillcard .circular-chart.orange .circle {
-  stroke: #ff9f00;
-}
-
-.undercard .skillcard .circular-chart.green .circle {
-  stroke: #4CC790;
-}
-
-.undercard .skillcard .circular-chart.blue .circle {
-  stroke: #3c9ee5;
-}
-
-.undercard .skillcard .percentage {
-  fill: #666;
-  font-family: sans-serif;
-  font-size: 0.5em;
-  text-anchor: middle;
-}
-
-.undercard .hobbyicon {
-  width: 100%;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+.profile .hobbyicon {
   z-index: -10;
 }
 
-.undercard .hobbyicon .icon-list {
+.profile .hobbyicon .icon-list {
   width: 100%;
   max-width: 50rem;
   padding: 0 1.5rem;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
 }
 
-.undercard .hobbyicon .icon-link {
+.profile .hobbyicon .icon-effect {
   position: relative;
   display: -webkit-inline-box;
   display: -ms-inline-flexbox;
@@ -652,15 +506,16 @@ body {
   font-family: "FontAwesome";
 }
 
-.undercard .hobbyicon .icon-link:hover {
+.profile .hobbyicon .icon-effect:hover {
   color: #fff;
 }
 
-.undercard .hobbyicon .icon-link i {
+.profile .hobbyicon .iconn {
   margin: auto;
+  font-size: 2rem;
 }
 
-.undercard .hobbyicon .icon-link::before {
+.profile .hobbyicon .icon-effect::before {
   content: '';
   position: absolute;
   top: 0;
@@ -680,30 +535,122 @@ body {
   transition: 0.3s;
 }
 
-.undercard .hobbyicon .icon-link:hover::before {
+.profile .hobbyicon .icon-effect:hover::before {
   -webkit-transform: scale(1);
       -ms-transform: scale(1);
           transform: scale(1);
 }
 
-.undercard .hobbyicon .icon-item:nth-child(1) a:hover:before {
-  background: var(--social-icon1);
+.profile .hobbyicon .icon-item:nth-child(1) span:hover:before {
+  background: pink;
 }
 
-.undercard .hobbyicon .icon-item:nth-child(2) a:hover:before {
+.profile .hobbyicon .icon-item:nth-child(2) span:hover:before {
   background: var(--social-icon2);
 }
 
-.undercard .hobbyicon .icon-item:nth-child(3) a:hover:before {
+.profile .hobbyicon .icon-item:nth-child(3) span:hover:before {
   background: var(--social-icon3);
 }
 
-.undercard .hobbyicon .icon-item:nth-child(4) a:hover:before {
+.profile .hobbyicon .icon-item:nth-child(4) span:hover:before {
   background: var(--social-icon4);
 }
 
-.undercard .hobbyicon .icon-item:nth-child(5) a:hover:before {
+.profile .hobbyicon .icon-item:nth-child(5) span:hover:before {
   background: var(--social-icon5);
+}
+
+.skillcard {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
+}
+
+.skillcard .single-chart {
+  width: 50%;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  position: relative;
+}
+
+.skillcard .single-chart img, .skillcard .single-chart i {
+  position: absolute;
+  top: 33%;
+  left: 42%;
+  font-size: 2.5rem;
+}
+
+@media (max-width: 1193px) {
+  .skillcard .single-chart img, .skillcard .single-chart i {
+    width: 32px;
+    font-size: 2.3rem;
+    top: 29%;
+  }
+}
+
+@media (max-width: 768px) {
+  .skillcard .single-chart img, .skillcard .single-chart i {
+    width: 48px;
+    top: 27%;
+    left: 40%;
+  }
+}
+
+.skillcard .circular-chart {
+  display: block;
+  margin: 10px auto;
+  max-width: 80%;
+  max-height: 250px;
+}
+
+.skillcard .circle-bg {
+  fill: none;
+  stroke: #eee;
+  stroke-width: 3.8;
+}
+
+.skillcard .circle {
+  fill: none;
+  stroke-width: 2.8;
+  stroke-linecap: round;
+  -webkit-animation: progress 5s ease-out forwards;
+          animation: progress 5s ease-out forwards;
+}
+
+@-webkit-keyframes progress {
+  0% {
+    stroke-dasharray: 0 100;
+  }
+}
+
+@keyframes progress {
+  0% {
+    stroke-dasharray: 0 100;
+  }
+}
+
+.skillcard .circular-chart.orange .circle {
+  stroke: #ff9f00;
+}
+
+.skillcard .circular-chart.green .circle {
+  stroke: #4CC790;
+}
+
+.skillcard .circular-chart.blue .circle {
+  stroke: #3c9ee5;
+}
+
+.skillcard .percentage {
+  fill: #666;
+  font-family: sans-serif;
+  font-size: 0.5em;
+  text-anchor: middle;
 }
 
 /*# sourceMappingURL=all.css.map */
