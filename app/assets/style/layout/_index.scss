@@ -130,6 +130,10 @@ background:$primary;
 color:$white;
 }
 
+
+//通用類別
+
+//1.卡片上標籤
 .tag{
   top:-2.2rem;
   background: $cyan;
@@ -138,6 +142,42 @@ color:$white;
     h4{
       font-family: 'Inter', sans-serif;
     }
+}
+
+//2.卡片樣式
+.cardstyles{
+  border-radius: 1rem;
+  &:hover{
+    box-shadow:0 6px 10px  #00000025;
+    scale: (1.01);
+    transition: all .3s ease-out;
+  }
+  @include mobile{
+    border-radius: 0.5rem;
+    margin-left:0;
+  }
+}
+
+//3.底線動畫
+.cardtitle{
+  color:$gray-700;
+  font-family: 'Azeret Mono';
+  font-size:1.5rem;
+  
+}
+.cardtitle::after{
+  position: absolute;
+  bottom: 0;
+  left: 30%;
+  content:'';
+  width: 40% ;
+  border-bottom: 4px solid $gray-700;
+  animation: line 1s linear;
+
+}
+@keyframes line {
+  from{width: 0;}
+  to{width: 40% };
 }
 
 .title{
@@ -234,10 +274,6 @@ color:$white;
       }
 }
 
-
-    
-
-
 .personcard{
   margin: 0 auto;
   border-radius: 1rem;
@@ -246,90 +282,14 @@ color:$white;
   .profileimg{
     width: 309px;
   }
-  .namae::after{
-    content: '';
-    display: block;
-    width: 80%;
-    margin: 0 auto;
-    border-bottom: 3px solid $primary;
-    margin-bottom: 2rem;
-  }
-}
-
-.expcard{
-  border-radius: 1rem;
-  box-shadow:0 6px 10px  #00000025;
-  height: 600px;
-  @include mobile{
-    border-radius: 0.5rem;
-    margin-left:0;
-  }
-  @include tab{
-    margin-left: 0;
-    border-radius: 0.5rem;
-  }
-
-  .bar{
-    width: 100%;
-    height: 5rem;
-  }
-  //Timeline
-  
-}
-
-.undercard{
-  .container{
-    margin: 0 auto;
-    // height: 500px;
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 3rem;
-    // justify-content: center;
-    // align-items: center;
-    @include tab{
-      grid-template-columns: repeat(1, 1fr);
-      gap: 3rem;
-      width: 70%;
  
-    }
-    @include mobile{
-      grid-template-columns: repeat(1, 1fr);
-      gap: 3rem;
-      width: 100%;
-       
-    }
-    .grid-item{
-
-      border-radius: 1rem;
-      width: 100%;
-      height: 100%;
-      background: $white;
-      &:hover{
-        box-shadow:0 6px 10px  #00000025;
-        transform:scale(1);
-        transition: all .3s ease-out;
-      }
-    }
-    .item1{
-      transform:rotate(1.5deg);
-    }
-    .item2{
-      grid-column: 2/3;
-      grid-row: 3/-1;
-      @include tab{
-          grid-column: 1/1;
-          grid-row: 1/1;
-        
-      }
-       
-      // @include mobile{
-      //   grid-column: 2/2;
-      //   grid-row: 1/1;
-      // }
-    }
-   
-  }
-
+}
+.expcard{
+  height: 500px;
+}
+.profile{
+  height: 100%;
+ 
   .profileicon{
 
     .wrapper {
@@ -376,27 +336,20 @@ color:$white;
         transform: translate(-50%) rotate(45deg);
         transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
       }
-      
       .icon:hover .tooltip {
         top: -45px;
         opacity: 1;
         visibility: visible;
         pointer-events: auto;
       }
-
-
-
       .list-item{
-        margin-left: 64px;
         @include mobile{
           margin-left: 15px;
         }
       }
       .item-content{
         font-family: 'Inter';
-
       }
- 
       .twitter:hover,
       .twitter:hover .tooltip,
       .twitter:hover .tooltip::before {
@@ -410,106 +363,20 @@ color:$white;
       color: #ffffff;
       }
     }
+
   }
 
-  .skillcard {
-    display: flex;
-    flex-flow: row wrap;
-      .single-chart {
-        width: 33%;
-        justify-content: space-around ;
-        position: relative;
-          i{
-            position: absolute;
-            top:30%;
-            left:45%;
-            font-size:1.5rem;
-          }
-      
-        img{
-          position: absolute;
-          top:30%;
-          left:42%;
-              @include mobile{
-                font-size: 12px;
-              }
-              @include mobile{
-                top:25%;
-                left:45%;
-              }
-          }
-      
-    
-      }
-      
-      .circular-chart {
-        display: block;
-        margin: 10px auto;
-        max-width: 80%;
-        max-height: 250px;
-      }
-      
-      .circle-bg {
-        fill: none;
-        stroke: #eee;
-        stroke-width: 3.8;
-      }
-      
-      .circle {
-        fill: none;
-        stroke-width: 2.8;
-        stroke-linecap: round;
-        animation: progress 5s ease-out forwards;
-      }
-      
-      @keyframes progress {
-        0% {
-          stroke-dasharray: 0 100;
-        }
-      }
-      
-      .circular-chart.orange .circle {
-        stroke: #ff9f00;
-      }
-      
-      .circular-chart.green .circle {
-        stroke: #4CC790;
-      }
-      
-      .circular-chart.blue .circle {
-        stroke: #3c9ee5;
-      }
-      
-      .percentage {
-        fill: #666;
-        font-family: sans-serif;
-        font-size: 0.5em;
-        text-anchor: middle;
-      }
-  
-  }
-  
+ 
 
- 
- 
   .hobbyicon{
-  
-    width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-     
+ 
     z-index: -10;
     .icon-list{
       width: 100%;
       max-width:50rem ;
       padding: 0 1.5rem;
-      display: flex;
-      justify-content: center;
     }
-    
-    
-    .icon-link{
+    .icon-effect{
       position: relative;
       display: inline-flex;
       font-size: 2rem;
@@ -523,15 +390,16 @@ color:$white;
       font-family: "FontAwesome";
     }
     
-    .icon-link:hover{
+    .icon-effect:hover{
       color: #fff;
     }
     
-    .icon-link i{
+    .iconn{
       margin: auto;
+      font-size: 2rem;
     }
     
-    .icon-link::before{
+    .icon-effect::before{
       content:'';
       position: absolute;
       top:0;
@@ -547,23 +415,99 @@ color:$white;
       transition:0.3s ;
     }
     
-    .icon-link:hover::before {  
+    .icon-effect:hover::before {  
       transform: scale(1);
     }
-    .icon-item:nth-child(1) a:hover:before { 
-      background: var(--social-icon1); 
+    .icon-item:nth-child(1) span:hover:before { 
+      background: pink; 
     }
-    .icon-item:nth-child(2) a:hover:before{
+    .icon-item:nth-child(2) span:hover:before{
       background: var(--social-icon2);
     }
-    .icon-item:nth-child(3) a:hover:before{
+    .icon-item:nth-child(3) span:hover:before{
       background: var(--social-icon3);
     }
-    .icon-item:nth-child(4) a:hover:before{
+    .icon-item:nth-child(4) span:hover:before{
       background: var(--social-icon4);
     }
-    .icon-item:nth-child(5) a:hover:before{
+    .icon-item:nth-child(5) span:hover:before{
       background: var(--social-icon5);
     }
     }
-  }
+}
+
+
+.skillcard {
+  display: flex;
+  flex-flow: row wrap;
+    .single-chart {
+      width: 50%;
+      justify-content: space-around ;
+      position: relative;
+      img,i{
+        position: absolute;
+        top:33%;
+        left:42%;
+        font-size:2.5rem;
+          @include tab{
+            width: 32px;
+            font-size: 2.3rem;
+            top: 29%;
+          }
+          @include mobile{
+            width:48px;
+            top:27%;
+            left:40%;
+          }
+        }
+    
+  
+    }
+    
+    .circular-chart {
+      display: block;
+      margin: 10px auto;
+      max-width: 80%;
+      max-height: 250px;
+    }
+    
+    .circle-bg {
+      fill: none;
+      stroke: #eee;
+      stroke-width: 3.8;
+    }
+    
+    .circle {
+      fill: none;
+      stroke-width: 2.8;
+      stroke-linecap: round;
+      animation: progress 5s ease-out forwards;
+    }
+    
+    @keyframes progress {
+      0% {
+        stroke-dasharray: 0 100;
+      }
+    }
+    
+    .circular-chart.orange .circle {
+      stroke: #ff9f00;
+    }
+    
+    .circular-chart.green .circle {
+      stroke: #4CC790;
+    }
+    
+    .circular-chart.blue .circle {
+      stroke: #3c9ee5;
+    }
+    
+    .percentage {
+      fill: #666;
+      font-family: sans-serif;
+      font-size: 0.5em;
+      text-anchor: middle;
+    }
+
+}
+
