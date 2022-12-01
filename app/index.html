@@ -19,42 +19,82 @@ current: index
        
        <div class="resumepage container">
         <div class="row">
-          <div class="personcard bd-highlight col-lg-5 bg-light d-flex flex-column">
+          <div data-aos="flip-left"  data-aos-duration="1200" class="cardstyles personcard bd-highlight col-lg-5 bg-light d-flex flex-column">
             <img src="./assets/images/becky.png" alt="" class="profileimg mt-4 m-auto rounded-circle">
               <div class="namae d-flex flex-column">
                 <div class="title m-auto p-3">
                   <h1 class="typeing">Becky chen</h1>
                 </div>
                 <div class="mx-auto mb-3">
-                  <img src="./assets/images/NAME.png" alt="" width="150px">
+                  <!-- <img src="./assets/images/NAME.png" alt="" width="150px"> -->
                 </div> 
  
 
               </div>  
-              <div class="socialtit mb-5 cardtitle  position-relative d-flex justify-content-center p-3">LINK</div>
-              <div class="socialicon mb-5" >
+              <div class="socialtit mb-5 cardtitle  position-relative d-flex justify-content-center p-3"  data-aos="fade-up" data-aos-duration="1000" >LINK</div>
+              <div class="socialicon mb-5" data-aos="fade-down" data-aos-duration="1000" data-aos-delay="1000" data-aos-offset="10">
                 <ul>
-                  <li class="mx-4"><a href="#"  target="_blank" ><i class="fa-brands fa-instagram instagram"></i></a></li>
-                  <li class="mx-4"><a href="#"  target="_blank" ><i class="fa-brands fa-whatsapp whatsapp"></i></a></li>
+                  <li class="mx-4"><a href="#"  target="_blank" ><i class="fa-brands fa-behance"></i></a></li>
+                  <li class="mx-4"><a href="#"  target="_blank" ><i class="fa-solid fa-house"></i></a></li>
                   <li class="mx-4"><a href="#"  target="_blank" ><i class="fa-brands fa-twitter twitter"></i></a></li>
                 </ul>   
               </div>
             </div>
           <!-- 工作經歷 -->
-          <div class="expcard cardstyles col-lg-6 col-md-12 bg-light position-relative mt-5 mx-auto">
+          <div data-aos="flip-right"  data-aos-duration="1000" data-aos-delay="250" class="expcard cardstyles col-lg-6 col-md-12 bg-light position-relative mt-5 mx-auto bg-light">
             <div class="tag position-absolute p-2 mb-0">
               <h4 class="fs-6 mb-0 px-2">EXPERIENCE</h4>
             </div>
-              <div class="bar"></div>
+            <div class="timeline-wrap p-2 my-3 d-flex justify-content-center">
+              <div class="timeline">
+                <div class="outer">
+                  <div class="cards p-2 position-relative mb-3" >
+                    <div class="info m-2">
+                      <h3 class="title fs-5 fw-bold mb-1" >Artist Manager</h3>
+                      <div class="mb-2 d-flex align-items-center time"> 
+                        <h4 class="inter">2021/07 - 2022/03</h4>
+                        <h3>晶德有限公司</h3>
+                      </div>
+                        <p>美術部門管理、組員專案工作指派分配、每週專案報告、部門內部訓練等</p>
+                    </div>
+                  </div>
+                  <div class="cards p-2 position-relative mb-3" >
+                    <div class="info m-2">
+                      <h3 class="title fs-5 fw-bold mb-1" >UI Designer</h3>
+                      <div class="mb-2 d-flex align-items-center time"> 
+                        <h4 class="inter">2020~2021</h4>
+                        <h3>聖霏有限公司</h3>
+                      </div>
+                        <p>網頁(H5)及手機遊戲之介面設計、場景繪製、元件製作、風格管理、動態特效拆圖等等。
+                          </p>
+                    </div>
+                  </div>
+                  <div class="cards p-2 position-relative mb-3" >
+                    <div class="info m-2">
+                      <h3 class="title fs-5 fw-bold mb-1" >美術設計/UI設計師</h3>
+                      <div class="mb-2 d-flex align-items-center time"> 
+                        <h4 class="inter">2010~2017</h4>
+                        <h3>傳奇網路科技</h3>
+                      </div>
+                        <p>線上、手機遊戲之UI元件繪製、介面規劃、物品繪製。參與專案:晴空物語、幻想神域、拉普拉斯神子等...。
+                          </p>
+                    </div>
+                  </div>
+                  
+                </div>
+              </div>
+            </div>
+              
+
           </div>
           <!-- 簡介 grid-->
-          <div class="profile cardstyles col-lg-5 bg-light position-relative mt-5  mx-auto">
+          <div data-aos="flip-left"  data-aos-duration="1000" data-aos-delay="350"  data-aos-once="true" class="profile cardstyles col-lg-5 bg-light position-relative mt-5  mx-auto">
             <div class="tag position-absolute p-2 mb-0">
               <h4 class="fs-6 mb-0 px-2">profile</h4>
               </div>
               <div class="bar"></div>
-              <div class="cardtitle p-3 d-flex justify-content-center position-relative mt-4">CONTACT</div>
-              <div class="profileicon">
+              <div data-aos="fade-up" data-aos-duration="1200" data-aos-delay="600" class="cardtitle p-3 d-flex justify-content-center position-relative mt-4">CONTACT</div>
+              <div class="profileicon " data-aos="fade-up" data-aos-duration="1200" data-aos-delay="800">
                 <ul class="wrapper d-flex flex-column my-4">
                   <li class="list-item mx-1 d-flex flex-row justify-content-space-around align-items-center">
                     <div class="icon twitter">
@@ -83,11 +123,13 @@ current: index
               
               
               <div class="hobbyicon my-3">
-                <div class="cardtitle p-3 d-flex justify-content-center position-relative">HOBBY</div>
-                <ul class="icon-list d-flex flex-wrap justify-content-center my-4">
+                <div data-aos="fade-up" data-aos-duration="1200" data-aos-delay="1000"  class="cardtitle p-3 d-flex justify-content-center position-relative ">HOBBY</div>
+                <ul class="icon-list d-flex flex-wrap justify-content-center my-4" data-aos="fade-up" data-aos-duration="1200" data-aos-delay="1200"  >
                   <li class="icon-item">
                     <span class="icon-effect"><i class="iconn fa-solid fa-gamepad"></i></span>
-                  
+                  </li>
+                  <li class="icon-item">
+                    <span class="icon-effect"><i class="iconn fa-solid fa-pen"></i></span>
                   </li>
                   <li class="icon-item">
                     <span class="icon-effect"><i class="iconn fa-solid fa-person-hiking"></i></span>
@@ -97,9 +139,6 @@ current: index
                         menu_book
                         </span></span>
                     </li>
-                  <li class="icon-item">
-                    <span class="icon-effect"><i class="iconn fa-solid fa-pen"></i></span>
-                  </li>
                   <li class="icon-item">
                     <span class="icon-effect"><i class="iconn fa-solid fa-bicycle"></i></span>
                   </li>
@@ -111,7 +150,7 @@ current: index
           
           
             </div>
-          <div class="skill cardstyles col-lg-6 bg-light position-relative mt-5 mx-auto ">
+          <div data-aos="flip-right"  data-aos-duration="1000" data-aos-delay="550"  data-aos-once="true" class="skill cardstyles col-lg-6 bg-light position-relative mt-5 mx-auto">
               <div class="tag position-absolute   p-2 mb-0">
                 <h4 class="fs-6 mb-0 px-2">SKILL</h4>
               </div>
@@ -152,10 +191,10 @@ current: index
                           />
                           <span> <img src="https://upload.wikimedia.org/wikipedia/commons/a/af/Adobe_Photoshop_CC_icon.svg" alt="" width="48px">  </span>
                         </svg>
-                        <p class="my-3 mx-auto">Photoshop</p>
+                        <p class="my-3 mx-auto inter fs-5">Photoshop</p>
                       </div>
                        <div class="single-chart d-flex flex-column ">
-                        <svg viewBox="0 0 36 36" class="circular-chart green">
+                        <svg viewBox="0 0 36 36" class="circular-chart orange">
                           <path class="circle-bg"
                             d="M18 2.0845
                               a 15.9155 15.9155 0 0 1 0 31.831
@@ -169,11 +208,11 @@ current: index
                           />
                           <span> <i class="fa-brands fa-html5"></i></span>
                         </svg>
-                        <p class="my-3 mx-auto">HTML+CSS </p>
+                        <p class="my-3 mx-auto inter fs-5">HTML+CSS </p>
                        </div>
                        
                       <div class="single-chart d-flex flex-column">
-                        <svg viewBox="0 0 36 36" class="circular-chart green">
+                        <svg viewBox="0 0 36 36" class="circular-chart figmacolor">
                           <path class="circle-bg"
                             d="M18 2.0845
                               a 15.9155 15.9155 0 0 1 0 31.831
@@ -185,14 +224,14 @@ current: index
                               a 15.9155 15.9155 0 0 1 0 31.831
                               a 15.9155 15.9155 0 0 1 0 -31.831"
                           />
-                          <span><i  class="fa-brands fa-figma "></i></span>
+                          <span> <i class="fa-brands fa-figma"></i></span>
                         </svg>
-                        <p class="my-3 mx-auto">figma/xd </p>
+                        <p class="my-3 mx-auto inter fs-5">figma/xd </p>
                       </div>
                     
     
-                      <div class="single-chart">
-                        <svg viewBox="0 0 36 36" class="circular-chart orange">
+                      <div class="single-chart  d-flex flex-column">
+                        <svg viewBox="0 0 36 36" class="circular-chart jscolor">
                           <path class="circle-bg"
                             d="M18 2.0845
                               a 15.9155 15.9155 0 0 1 0 31.831
@@ -204,25 +243,26 @@ current: index
                               a 15.9155 15.9155 0 0 1 0 31.831
                               a 15.9155 15.9155 0 0 1 0 -31.831"
                           />
-                          
+                          <span> <i class="fa-brands fa-js"></i></span>
                         </svg>
+                        <p class="my-3 mx-auto inter fs-5 ">JavaScript </p>
                       </div>
                       <div class="single-chart d-flex flex-column">
                         <svg viewBox="0 0 36 36" class="circular-chart blue">
                           <path class="circle-bg"
-                            d="M18 2.0845
-                              a 15.9155 15.9155 0 0 1 0 31.831
-                              a 15.9155 15.9155 0 0 1 0 -31.831"
-                          />
-                          <path class="circle"
-                            stroke-dasharray="90, 100"
-                            d="M18 2.0845
-                              a 15.9155 15.9155 0 0 1 0 31.831
-                              a 15.9155 15.9155 0 0 1 0 -31.831"
-                          />
-                          <span><i  class="fa-brands fa-figma  "></i></span>
+                          d="M18 2.0845
+                            a 15.9155 15.9155 0 0 1 0 31.831
+                            a 15.9155 15.9155 0 0 1 0 -31.831"
+                        />
+                        <path class="circle"
+                          stroke-dasharray="30, 100"
+                          d="M18 2.0845
+                            a 15.9155 15.9155 0 0 1 0 31.831
+                            a 15.9155 15.9155 0 0 1 0 -31.831"
+                        />
+                        <span> <img src="https://upload.wikimedia.org/wikipedia/commons/c/cb/Adobe_After_Effects_CC_icon.svg" alt="" width="48px">  </span>
                         </svg>
-                        <p class="my-3 mx-auto">figma/xd </p>
+                        <p class="my-3 mx-auto inter fs-5">AE</p>
                       </div>
                     </div>
                   </div>

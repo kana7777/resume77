@@ -1,16 +1,4 @@
-/* http://meyerweb.com/eric/tools/css/reset/ 
-   v2.0 | 20110126
-   License: none (public domain)
-*/
-:root {
-  --bg: #dcdde1;     
-  --color-icon: #535c68;  
-  --social-icon1: #e4405f;
-  --social-icon2: #3b5999;
-  --social-icon3: #0057FF;
-  --social-icon4: #cd201f;
-  --social-icon5: #0077B5;  
-}
+ 
 /*css reset*/
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
@@ -53,7 +41,7 @@ table {
 	border-collapse: collapse;
 	border-spacing: 0;
 }
-
+ 
 .index__h1 {
   color:#00cc99;
   font-size: 20px;
@@ -139,6 +127,7 @@ color:$white;
   background: $cyan;
   border-top-left-radius: 0.5rem;
   border-top-right-radius: 0.5rem;
+  text-transform:uppercase;
     h4{
       font-family: 'Inter', sans-serif;
     }
@@ -148,9 +137,7 @@ color:$white;
 .cardstyles{
   border-radius: 1rem;
   &:hover{
-    box-shadow:0 6px 10px  #00000025;
-    scale: (1.01);
-    transition: all .3s ease-out;
+    box-shadow:5px 10px 10px  #00000055;
   }
   @include mobile{
     border-radius: 0.5rem;
@@ -161,8 +148,8 @@ color:$white;
 //3.底線動畫
 .cardtitle{
   color:$gray-700;
-  font-family: 'Azeret Mono';
-  font-size:1.5rem;
+  font-family: 'Inter', sans-serif;
+  font-size:1.2rem;
   
 }
 .cardtitle::after{
@@ -171,15 +158,15 @@ color:$white;
   left: 30%;
   content:'';
   width: 40% ;
-  border-bottom: 4px solid $gray-700;
-  animation: line 1s linear;
-
-}
-@keyframes line {
-  from{width: 0;}
-  to{width: 40% };
+  border-bottom: 3px solid $gray-700;
+ 
 }
 
+//4.font
+.inter{
+  font-family: 'Inter';
+}
+ 
 .title{
   h1{
     font-family: 'Nerko One', cursive;
@@ -219,25 +206,24 @@ color:$white;
     }
 }
 
-
+//LINKS
 .socialicon{
   ul{
     position: relative;
     display: flex;
     justify-content: center;
-  
   }
   ul li{
     position: relative;
     list-style:none;
-    //margin:0 auto;
     cursor: pointer;
   }
-  ul li a {
-     //margin-right: 30px;
-     text-decoration: none;
-      }
-  ul li a .fa-brands{
+ 
+  .fa-brands {
+    font-size: 2em;
+    color: #555;
+  }
+ .fa-solid {
     font-size: 2em;
     color: #555;
   }
@@ -245,22 +231,20 @@ color:$white;
     margin: 0 auto;
   }
   ul li a::before {
-  
           font-family: "FontAwesome";
           position: absolute;
           font-size: 2em;
-      
           height: 0;
           overflow: hidden;
           transition: 0.5s ease-in-out;
   }
   ul li:nth-child(1) a::before {
-          content: "\f16d";
-          color: #25D366;
-          border-bottom: 3px solid #25D366;
+          content: "\f1b4";
+          color: #0057FF;
+          border-bottom: 3px solid #0057FF;
       }
   ul li:nth-child(2) a::before {
-          content: "\f232";
+          content: "\f015";
           color: #25D366;
           border-bottom: 3px solid #25D366;
       }
@@ -274,19 +258,89 @@ color:$white;
       }
 }
 
+
 .personcard{
   margin: 0 auto;
   border-radius: 1rem;
   height: 100%;
-  box-shadow:0 6px 10px  #00000025;
   .profileimg{
     width: 309px;
   }
  
 }
 .expcard{
-  height: 500px;
+  background: $white;
+  .timeline {
+    
+    margin: 20px auto;
+    padding: 20px;
+  }
+  
+  /* Outer Layer with the timeline border */
+  .outer {
+    border-left: 6px solid $primary;
+  
+  }
+  
+  /* Card container */
+  .cards {
+    margin-left: 2em;
+    background: $secondary;
+    border-radius: 14px;
+   
+  }
+  .cards::before{
+    content: "◀";
+    position: absolute;
+    top:7px;
+    left:-25px;
+    color:$secondary;
+    font-size: 2em;
+    
+    }
+  
+  /* Information about the timeline */
+  
+  /* Title of the card */
+  .title {
+    color: $gray-600;
+    position: relative;
+    font-family: 'inter';
+ 
+  }
+
+  
+  /* Timeline dot  */
+  .title::before {
+    content: "";
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background: white;
+    border-radius: 20px;
+    left:-72px;
+    top:0;
+    border: 4px solid orangered;
+  }
+  // .title::after{
+  //   display: block;
+  //   content: '';
+  //   border-bottom: 4px solid $gray-600;
+  //   border-radius: 2px;
+  //   width: 95%;
+  //   margin-top: 6px;
+   
+  // }
+
+  .time{
+    justify-content:space-between;
+    border-bottom: 2px solid $gray-600;
+  }
+
 }
+
+
+
 .profile{
   height: 100%;
  
@@ -381,7 +435,7 @@ color:$white;
       display: inline-flex;
       font-size: 2rem;
       text-decoration: none;
-      color:var(--color-icon);
+      color:$gray-700;
       width: 6rem;
       height: 6rem;
       transition:.3s linear;
@@ -415,24 +469,27 @@ color:$white;
       transition:0.3s ;
     }
     
-    .icon-effect:hover::before {  
-      transform: scale(1);
-    }
-    .icon-item:nth-child(1) span:hover:before { 
-      background: pink; 
-    }
-    .icon-item:nth-child(2) span:hover:before{
-      background: var(--social-icon2);
-    }
-    .icon-item:nth-child(3) span:hover:before{
-      background: var(--social-icon3);
-    }
-    .icon-item:nth-child(4) span:hover:before{
-      background: var(--social-icon4);
-    }
-    .icon-item:nth-child(5) span:hover:before{
-      background: var(--social-icon5);
-    }
+      .icon-effect:hover::before {  
+        transform: scale(1);
+      }
+      .icon-item:nth-child(1) span:hover:before { 
+        background: $orange; 
+      }
+      .icon-item:nth-child(2) span:hover:before{
+        background:  $yellow;
+      }
+      .icon-item:nth-child(3) span:hover:before{
+        background:  $green;
+      }
+      .icon-item:nth-child(4) span:hover:before{
+        background:$indigo;
+      }
+      .icon-item:nth-child(5) span:hover:before{
+        background: $teal;
+      }
+      .icon-item:nth-child(6) span:hover:before{
+        background: $purple;
+      }
     }
 }
 
@@ -481,25 +538,37 @@ color:$white;
       fill: none;
       stroke-width: 2.8;
       stroke-linecap: round;
-      animation: progress 5s ease-out forwards;
+      animation: progress 10s ease-out forwards;
     }
     
     @keyframes progress {
       0% {
         stroke-dasharray: 0 100;
+        animation-delay:1s;
       }
     }
-    
+    .fa-html5{
+      color:  $html-orange;
+    }
+    .fa-js{
+      color: $js-yellow;
+    }
+    .fa-figma{
+      color: $purple;
+    }
     .circular-chart.orange .circle {
-      stroke: #ff9f00;
+      stroke: $html-orange;
     }
     
-    .circular-chart.green .circle {
-      stroke: #4CC790;
+    .circular-chart.jscolor .circle {
+      stroke: $js-yellow;
     }
     
     .circular-chart.blue .circle {
       stroke: #3c9ee5;
+    }
+    .circular-chart.figmacolor .circle {
+      stroke: $purple;
     }
     
     .percentage {
@@ -510,4 +579,5 @@ color:$white;
     }
 
 }
+
 

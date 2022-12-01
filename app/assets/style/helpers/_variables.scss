@@ -39,13 +39,16 @@ $grays: (
 $blue:    #0d6efd !default;
 $indigo:  #6610f2 !default;
 $purple:  #6f42c1 !default;
-$pink:    #d63384 !default;
+$pink:    #FFCEF1;//#d63384 !default;
 $red:     #dc3545 !default;
 $orange:  #fd7e14 !default;
-$yellow:  #ffc107 !default;
-$green:   #198754 !default;
-$teal:    #20c997 !default;
+$yellow:  #ffc107 !default;//#FED582;
+$green:   #05CB79;//#198754 !default;
+$teal:   #20c997 !default;// #C4EDC6;
 $cyan:    #C1E4E8;//#0dcaf0 !default;
+$js-yellow:#EFD81D;
+$html-orange:#F75421;
+
 // scss-docs-end color-variables
 
 // scss-docs-start colors-map
@@ -68,7 +71,7 @@ $colors: (
 
 // scss-docs-start theme-color-variables
 $primary:       #8BA3E1; // $blue !default;
-$secondary:     $gray-600 !default;
+$secondary:     #FFE3E3;//$gray-600 !default;
 $success:       $green !default;
 $info:          $cyan !default;
 $warning:       $yellow !default;
