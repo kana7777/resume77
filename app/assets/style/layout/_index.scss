@@ -272,19 +272,19 @@ color:$white;
   height: 100%;
   background: $white;
   .timeline {
-    
     margin: 20px auto;
     padding: 20px;
   }
   
   /* Outer Layer with the timeline border */
   .outer {
-    border-left: 6px solid $primary;
+    border-left: 10px solid $primary;
   
   }
   
   /* Card container */
   .cards {
+    padding: 0.5rem;
     margin-left: 1.5em;
     background: $secondary;
     border-radius: 14px;
@@ -293,14 +293,13 @@ color:$white;
   .cards::before{
     content: "";
     position: absolute;
-    top:7px;
+    top:1.3em;
     left:-25px;
     color:$secondary;
-   
     width: 0;
     height: 0;
     border-style: solid;
-    border-width: 32px 32px 32px 0;
+    border-width: 16px 32px  16px 0;
     border-color: transparent #ffe3e3 transparent transparent;
     }
   
@@ -314,8 +313,8 @@ color:$white;
     @include mobile{
       font-size: 12px;
     }
- 
   }
+
 
   
   /* Timeline dot  */
@@ -326,7 +325,7 @@ color:$white;
     height: 15px;
     background: $white;
     border-radius: 20px;
-    left:-2em;
+    left:-2.2rem;
     top:1.5em;
     border: 4px solid $primary;
   }
