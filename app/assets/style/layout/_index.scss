@@ -61,6 +61,7 @@ body{
 .warpper{
   display:flex;
   flex-direction: column;
+   
 }
  
 .tab{
@@ -107,7 +108,6 @@ body{
 .radio{
 display:none;
 }
-
 #one:checked ~ .panels #one-panel,
 #two:checked ~ .panels #two-panel {
 display:block
