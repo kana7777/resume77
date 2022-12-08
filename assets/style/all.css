@@ -15,6 +15,9 @@ body .options {
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   -webkit-box-align: stretch;
       -ms-flex-align: stretch;
           align-items: stretch;
@@ -25,9 +28,15 @@ body .options {
   height: 400px;
 }
 
+@media (max-width: 576px) {
+  body .options {
+    display: none;
+  }
+}
+
 @media screen and (max-width: 718px) {
   body .options {
-    min-width: 520px;
+    min-width: 270px;
   }
   body .options .option:nth-child(5) {
     display: none;
@@ -36,7 +45,7 @@ body .options {
 
 @media screen and (max-width: 638px) {
   body .options {
-    min-width: 440px;
+    min-width: 190px;
   }
   body .options .option:nth-child(4) {
     display: none;
@@ -45,7 +54,7 @@ body .options {
 
 @media screen and (max-width: 558px) {
   body .options {
-    min-width: 360px;
+    min-width: 110px;
   }
   body .options .option:nth-child(3) {
     display: none;
@@ -54,7 +63,7 @@ body .options {
 
 @media screen and (max-width: 478px) {
   body .options {
-    min-width: 280px;
+    min-width: 30px;
   }
   body .options .option:nth-child(2) {
     display: none;
@@ -336,7 +345,7 @@ body {
   }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 576px) {
   .panels {
     padding: 24px;
   }
@@ -402,7 +411,7 @@ body {
           box-shadow: 5px 10px 10px  #00000055;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 576px) {
   .cardstyles {
     border-radius: 0.5rem;
     margin-left: 0;
@@ -446,7 +455,7 @@ body {
   }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 576px) {
   .title h1 {
     font-size: 2rem;
   }
@@ -616,7 +625,7 @@ body {
   font-family: 'inter';
 }
 
-@media (max-width: 768px) {
+@media (max-width: 576px) {
   .expcard .title {
     font-size: 12px;
   }
@@ -641,7 +650,7 @@ body {
   border-bottom: 2px solid #6c757d;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 576px) {
   .expcard .time h3, .expcard .time h4 {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -652,7 +661,7 @@ body {
   }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 576px) {
   .expcard .time {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
@@ -740,7 +749,7 @@ body {
   pointer-events: auto;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 576px) {
   .profile .profileicon .wrapper .list-item {
     margin-left: 15px;
   }
@@ -883,7 +892,7 @@ body {
   }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 576px) {
   .skillcard .single-chart img, .skillcard .single-chart i {
     width: 48px;
     top: 27%;

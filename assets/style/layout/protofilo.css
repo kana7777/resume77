@@ -14,6 +14,9 @@ body .options {
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   -webkit-box-align: stretch;
       -ms-flex-align: stretch;
           align-items: stretch;
@@ -24,9 +27,15 @@ body .options {
   height: 400px;
 }
 
+@media (max-width: 576px) {
+  body .options {
+    display: none;
+  }
+}
+
 @media screen and (max-width: 718px) {
   body .options {
-    min-width: 520px;
+    min-width: 270px;
   }
   body .options .option:nth-child(5) {
     display: none;
@@ -35,7 +44,7 @@ body .options {
 
 @media screen and (max-width: 638px) {
   body .options {
-    min-width: 440px;
+    min-width: 190px;
   }
   body .options .option:nth-child(4) {
     display: none;
@@ -44,7 +53,7 @@ body .options {
 
 @media screen and (max-width: 558px) {
   body .options {
-    min-width: 360px;
+    min-width: 110px;
   }
   body .options .option:nth-child(3) {
     display: none;
@@ -53,7 +62,7 @@ body .options {
 
 @media screen and (max-width: 478px) {
   body .options {
-    min-width: 280px;
+    min-width: 30px;
   }
   body .options .option:nth-child(2) {
     display: none;
