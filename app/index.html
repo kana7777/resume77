@@ -288,31 +288,74 @@ current: index
 
     </div>
     <div class="panel" id="two-panel">
-      <h1 class="protofilo_title mx-auto ">Web</h1>
-      <div class="carousel" duration="7000">
-        <ul tabindex="0">
-          <li id="c1_slide1" class="selected"><div><div></div>Nice cat number 1<br /><a href="https://www.google.com">adopt me</a></div></li>  
-          <li id="c1_slide2"><div><div></div>Nice cat number 2<br /><a href="https://www.google.com">adopt me</a></div></li>  
-          <li id="c1_slide3"><div><div></div>Nice cat number 3<br /><a href="https://www.google.com">adopt me</a></div></li>  
-          <li id="c1_slide4"><div><div></div>Nice cat number 4<br /><a href="https://www.google.com">adopt me</a></div></li>  
-          <li id="c1_slide5"><div><div></div>Nice cat number 5<br /><a href="https://www.google.com">adopt me</a></div></li>  
-          <li id="c1_slide6"><div><div></div>Nice cat number 6<br /><a href="https://www.google.com">adopt me</a></div></li>  
-          <li id="c1_slide7"><div><div></div>Nice cat number 7<br /><a href="https://www.google.com">adopt me</a></div></li>  
-          <li id="c1_slide8"><div><div></div>Nice cat number 8<br /><a href="https://www.google.com">adopt me</a></div></li>  
-        </ul>
-        <ol>
-          <li class="selected"><a href="#c1_slide1"></a></li>
-          <li><a href="#c1_slide2"></a></li>
-          <li><a href="#c1_slide3"></a></li>
-          <li><a href="#c1_slide4"></a></li>
-          <li><a href="#c1_slide5"></a></li>
-          <li><a href="#c1_slide6"></a></li>
-          <li><a href="#c1_slide7"></a></li>
-          <li><a href="#c1_slide8"></a></li>
-        </ol>
-        <div class="prev">&lsaquo;</div>
-        <div class="next">&rsaquo;</div>
-      </div>
+      <div class="options">
+        <div class="option active" style="--optionBackground:url('https://i.imgur.com/oWEhhC6.jpg');">
+           <div class="shadow"></div>
+           <div class="label">
+              <div class="icon">
+                 <i class="fas fa-walking"></i>
+              </div>
+              <a href="https://kana7777.github.io/week6/" target="_blank"> 
+              <div class="info">
+                 <div class="main">網頁切版-程式家教</div>
+                 <div class="sub">使用bootstramp5框架，加上客製化元素。</div> 
+              </div>
+              </a>
+           </div>
+        </div>
+        <div class="option" style="--optionBackground:url(https://66.media.tumblr.com/8b69cdde47aa952e4176b4200052abf4/tumblr_o51p7mFFF21qho82wo1_1280.jpg);">
+           <div class="shadow"></div>
+           <div class="label">
+              <div class="icon">
+                 <i class="fas fa-snowflake"></i>
+              </div>
+              <div class="info">
+                 <div class="main">網頁切版-形象官網</div>
+                 <div class="sub">純手刻練習，熟悉語法及CSS</div>
+              </div>
+           </div>
+        </div>
+        <div class="option" style="--optionBackground:url(https://66.media.tumblr.com/5af3f8303456e376ceda1517553ba786/tumblr_o4986gakjh1qho82wo1_1280.jpg);">
+           <div class="shadow"></div>
+           <div class="label">
+              <div class="icon">
+                 <i class="fas fa-tree"></i>
+              </div>
+              <div class="info">
+                 <div class="main">網頁設計-形象官網</div>
+                 <div class="sub">形象官網設計練習(使用FIGMA軟體設計)</div>
+              </div>
+           </div>
+        </div>
+        <div class="option" style="--optionBackground:url(https://66.media.tumblr.com/5516a22e0cdacaa85311ec3f8fd1e9ef/tumblr_o45jwvdsL11qho82wo1_1280.jpg);">
+           <div class="shadow"></div>
+           <div class="label">
+              <div class="icon">
+                 <i class="fas fa-tint"></i>
+              </div>
+              <div class="info">
+                 <div class="main">網頁設計-練習</div>
+                 <div class="sub">使用adobe XD練習網頁設計</div>
+              </div>
+           </div>
+        </div>
+        <div class="option" style="--optionBackground:url(https://66.media.tumblr.com/f19901f50b79604839ca761cd6d74748/tumblr_o65rohhkQL1qho82wo1_1280.jpg);">
+           <div class="shadow"></div>
+           <div class="label">
+              <div class="icon">
+                 <i class="fas fa-sun"></i>
+              </div>
+              <div class="info">
+                 <div class="main">其他設計、繪圖作品</div>
+                 <div class="sub"></div>
+              </div>
+           </div>
+        </div>
+     </div>
+     
+     
+       
+
  
  
        
@@ -321,129 +364,14 @@ current: index
 
 </div>
 </div> 
+ 
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+ 
 <script>
-  document.addEventListener('DOMContentLoaded', function() {
-    
-    const carousels = document.querySelectorAll('.carousel');
-    carousels.forEach(function( carousel ) {
-  
-        const ele = carousel.querySelector('ul');
-        const amountvisible = Math.round(ele.offsetWidth/ele.querySelector('li:nth-child(1)').offsetWidth);
-        const bullets = carousel.querySelectorAll('ol li');
-        const slides = carousel.querySelectorAll('ul li');
-        const nextarrow = carousel.querySelector('.next');
-        const prevarrow = carousel.querySelector('.prev');
-  
-        // Initialize the carousel
-        nextarrow.style.display = 'block';
-        prevarrow.style.display = 'block';
-        ele.scrollLeft = 0;
-        bullets[0].classList.add('selected');
-        slides[0].classList.add('selected');
-        if(amountvisible>1) {
-          var removeels = carousel.querySelectorAll('ol li:nth-last-child(-n + '+(amountvisible-1)+')');
-          removeels.forEach(function(removeel) {
-            removeel.remove();
-          });
-        }
-  
-        const setSelected = function() {
-            bullets.forEach(function(bullet) {
-               bullet.classList.remove('selected');
-            });
-            slides.forEach(function(slide) {
-               slide.classList.remove('selected');
-            });
-            const scrolllength = carousel.querySelector('ul li:nth-child(2)').offsetLeft - carousel.querySelector('ul li:nth-child(1)').offsetLeft;
-            const nthchild = (Math.round((ele.scrollLeft/scrolllength)+1));
-            carousel.querySelector('ol li:nth-child('+nthchild+')').classList.add('selected'); 
-            carousel.querySelector('ul li:nth-child('+nthchild+')').classList.add('selected'); 
-            if(carousel.parentElement.parentElement.querySelector('.dynamictitle')) {
-                const title = carousel.querySelector('ul li:nth-child('+nthchild+') img').getAttribute('title'); 
-                if(title) carousel.parentElement.parentElement.querySelector('.dynamictitle').innerHTML = title;
-            }
-        }
-  
-        const scrollTo = function(event) {
-            event.preventDefault();
-            ele.scrollLeft = ele.querySelector(this.getAttribute('href')).offsetLeft;
-        }
-        
-        const nextSlide = function() {
-            if(!carousel.querySelector('ol li:last-child').classList.contains('selected')) {
-                carousel.querySelector('ol li.selected').nextElementSibling.querySelector('a').click();
-            } else {
-                carousel.querySelector('ol li:first-child a').click();
-            }
-        }
-  
-        const prevSlide = function() {
-            if(!carousel.querySelector('ol li:first-child').classList.contains('selected')) {
-                carousel.querySelector('ol li.selected').previousElementSibling.querySelector('a').click();
-            } else {
-                carousel.querySelector('ol li:last-child a').click();
-            }
-        }
-        
-        const setInteracted = function() {
-          ele.classList.add('interacted');
-        }
-            
-        // Attach the handlers
-        ele.addEventListener("scroll", debounce(setSelected));
-        ele.addEventListener("touchstart", setInteracted);
-        ele.addEventListener('keydown', function (e){
-            if(e.key == 'ArrowLeft') ele.classList.add('interacted');
-            if(e.key == 'ArrowRight') ele.classList.add('interacted');
-        });
-  
-        nextarrow.addEventListener("click", nextSlide);
-        nextarrow.addEventListener("mousedown", setInteracted);
-        nextarrow.addEventListener("touchstart", setInteracted);
-  
-        prevarrow.addEventListener("click", prevSlide);
-        prevarrow.addEventListener("mousedown", setInteracted);
-        prevarrow.addEventListener("touchstart", setInteracted);
-  
-        bullets.forEach(function(bullet) {
-          bullet.querySelector('a').addEventListener('click', scrollTo);
-          bullet.addEventListener("mousedown", setInteracted);
-          bullet.addEventListener("touchstart", setInteracted);
-        });
-  
-        //setInterval for autoplay
-        if(carousel.getAttribute('duration')) {
-          setInterval(function(){ 
-            if (ele != document.querySelector(".carousel:hover ul") && ele.classList.contains('interacted')==false) {
-              nextarrow.click();
-            }
-          }, carousel.getAttribute('duration'));
-        }
-      
-      
-    });  
-  
-  });  
-  
-  
-  
- 
-  function debounce (fn) {
- 
-  let timeout;
- 
-  return function () {
- 
-    let context = this;
-    let args = arguments;
- 
-    if (timeout) {
-      window.cancelAnimationFrame(timeout);
-    }
-     
-    timeout = window.requestAnimationFrame(function () {
-      fn.apply(context, args);
-    });
-  };
-  }
+  $(".option").click(function(){
+   $(".option").removeClass("active");
+   $(this).addClass("active");
+   
+});
+
 </script>
