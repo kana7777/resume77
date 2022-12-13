@@ -741,27 +741,30 @@ body {
   padding-top: 80px;
 }
 
+#customers-testimonials .items {
+  text-align: center;
+}
+
+#customers-testimonials a {
+  text-decoration: none;
+}
+
 #customers-testimonials .item-details {
   background-color: #333333;
   color: #fff;
-  padding: 1.5em 1ems;
+  padding: 1rem;
   text-align: left;
+  font-family: 'inter';
 }
 
 #customers-testimonials .item-details h5 {
   margin: 0 0 15px;
-  font-size: 18px;
-  line-height: 18px;
-}
-
-#customers-testimonials .item-details h5 span {
-  color: red;
-  float: right;
-  padding-right: 20px;
+  font-size: 1.5rem;
+  line-height: 1.5;
 }
 
 #customers-testimonials .item-details p {
-  font-size: 14px;
+  font-size: 1rem;
 }
 
 #customers-testimonials .owl-theme .item {
@@ -770,20 +773,10 @@ body {
   padding: 1rem;
 }
 
-#customers-testimonials .item {
-  text-align: center;
-  margin-bottom: 6em;
-  margin-top: 6em;
-}
-
 .owl-carousel .owl-nav [class*='owl-'] {
   -webkit-transition: all .3s ease;
   -o-transition: all .3s ease;
   transition: all .3s ease;
-}
-
-.owl-carousel .owl-nav [class*='owl-'].disabled:hover {
-  background-color: #D6D6D6;
 }
 
 .owl-carousel {
@@ -795,18 +788,18 @@ body {
   width: 2em;
   height: 2em;
   position: absolute;
-  bottom: 0;
-  font-size: 3em;
-  color: #fff;
+  top: 6rem;
+  font-size: 3rem;
+  color: white;
   text-align: center;
 }
 
-.owl-carousel .owl-prev {
-  left: 0;
+.owl-prev {
+  left: -4rem;
 }
 
-.owl-carousel .owl-next {
-  right: 0;
+.owl-next {
+  right: -4rem;
 }
 
 /*# sourceMappingURL=all.css.map */
