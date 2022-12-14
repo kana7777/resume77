@@ -1,0 +1,25 @@
+ .portcard{
+    background-color: $primary;
+ }
+ 
+ .card{
+   border: 5px solid white;
+   max-height: 100%;
+ }
+
+ .card:hover{
+        transform: scale(1.01);
+        transition:  linear 0.2s;
+        box-shadow: 0 0 15px black;
+    }
+ 
+ .porttitle{
+    font-family:'Nerko One' ;
+    color:white;
+ }
+ .back{
+    color: white;
+    padding: 20px;
+    margin-left: 1rem;
+    
+ }

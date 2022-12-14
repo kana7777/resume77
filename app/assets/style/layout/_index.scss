@@ -76,9 +76,9 @@ body{
   border-radius:10px 10px 0px 0px;
   box-shadow:0 8px 10px  #888888;
   font-family: 'Nerko One', cursive;
-  border-top: 6px solid $primary;
-  border-left: 6px solid $primary;
-  border-right: 6px solid $primary;
+  border-top: 4px solid $primary;
+  border-left: 4px solid $primary;
+  border-right: 4px solid $primary;
 }
 .panels{
   background:$primary;
@@ -223,11 +223,11 @@ color:$white;
   }
  
   .fa-brands {
-    font-size: 2em;
+    font-size: 2rem;
     color: #555;
   }
  .fa-solid {
-    font-size: 2em;
+    font-size: 2rem;
     color: #555;
   }
   i{
@@ -236,25 +236,25 @@ color:$white;
   ul li a::before {
           font-family: "FontAwesome";
           position: absolute;
-          font-size: 2em;
+          font-size: 2rem;
           height: 0;
           overflow: hidden;
-          transition: 0.5s ease-in-out;
+          transition: 0.3s ease-in-out;
   }
   ul li:nth-child(1) a::before {
           content: "\f1b4";
           color: #0057FF;
-          border-bottom: 3px solid #0057FF;
+          border-bottom: 1px solid #0057FF;
       }
   ul li:nth-child(2) a::before {
           content: "\f015";
           color: #25D366;
-          border-bottom: 3px solid #25D366;
+          border-bottom: 1px solid #25D366;
       }
   ul li:nth-child(3) a::before {
           content: "\f099";
           color: #1DA1F2;
-          border-bottom: 3px solid #1DA1F2;
+          border-bottom: 1px solid #1DA1F2;
       }
   ul li:hover a::before {
           height: 100%;
@@ -288,15 +288,15 @@ color:$white;
   /* Card container */
   .cards {
     padding: 0.5rem;
-    margin-left: 1.5em;
+    margin-left: 1.5rem;
     background: $secondary;
-    border-radius: 14px;
+    border-radius:1rem;
    
   }
   .cards::before{
     content: "";
     position: absolute;
-    top:1.3em;
+    top:1rem;
     left:-25px;
     color:$secondary;
     width: 0;
@@ -309,13 +309,18 @@ color:$white;
   /* Information about the timeline */
   
   /* Title of the card */
-  .title {
+  h3 {
     color: $gray-600;
     position: relative;
     font-family: 'inter';
+    font-size: 1rem;
     @include mobile{
+    margin: 0 auto;
+    }
+    p{
       font-size: 12px;
     }
+ 
   }
 
 
@@ -345,11 +350,6 @@ color:$white;
   .time{
     justify-content:space-between;
     border-bottom: 2px solid $gray-600;
-    h3,h4{
-      @include mobile{
-        display: flex;
-        justify-content: flex-start;
-      }
     }
     @include mobile{
       
@@ -358,7 +358,7 @@ color:$white;
     }
   }
 
-}
+
 
 
 
@@ -524,22 +524,17 @@ color:$white;
       position: relative;
       img,i{
         position: absolute;
-        top:33%;
-        left:42%;
+        top:3.5rem;
+        left:4.5rem;
         font-size:2.5rem;
-          @include tab{
-            width: 32px;
-            font-size: 2.3rem;
-            top: 29%;
-          }
+ 
           @include mobile{
-            width:48px;
-            top:27%;
-            left:40%;
+            width:24px;
+            font-size: 1.5rem;
+            top:3.2rem;
+            left:3.5rem;
           }
         }
-    
-  
     }
     
     .circular-chart {
@@ -606,9 +601,9 @@ color:$white;
 
 @import url('https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css');
 @import url('https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.1.1/assets/owl.carousel.min.css');
-.protocards{
+.protcards{
 	// position: relative;
-	padding-top: 80px;
+	 
 	// &:after{
 	// 	content: '';
 	// 	//position: absolute;
@@ -672,7 +667,7 @@ color:$white;
   height: 2em;
   
   position: absolute;
-  top: 6rem ;
+  top: 8rem ;
 	font-size: 3rem;
   color: white;
  
